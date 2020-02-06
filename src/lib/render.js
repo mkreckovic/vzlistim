@@ -71,14 +71,20 @@ export default async function renderTable() {
       limitDisk += cnt.diskspace.softlimit
     }
     data.push([
-      cnt.status == 'running' ? chalk.greenBright(cnt.status) : cnt.status,
+      cnt.status == 'running'
+        ? chalk.greenBright(cnt.status)
+        : cnt.status == 'stopped'
+        ? chalk.redBright(cnt.status)
+        : cnt.status,
       chalk.yellowBright(cnt.ctid),
       cnt.name,
-      chalk.white.bold(cnt.laverage[0]) +
-        ' ' +
-        chalk.cyanBright.bold(cnt.laverage[1]) +
-        ' ' +
-        chalk.cyan(cnt.laverage[2]),
+      cnt.laverage
+        ? chalk.white.bold(cnt.laverage[0].toFixed(2)) +
+          ' ' +
+          chalk.cyanBright.bold(cnt.laverage[1].toFixed(2)) +
+          ' ' +
+          chalk.cyan(cnt.laverage[2].toFixed(2))
+        : '',
       cnt.ip
         .join('\n')
         .split('.')
