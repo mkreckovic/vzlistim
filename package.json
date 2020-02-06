@@ -1,6 +1,6 @@
 {
   "name": "vzlistim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Improved vzlist command line utility",
   "author": "Marko Krečković <m.kreckovic@gmail.com>",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "esm": "^3.2.25",
     "execa": "^4.0.0",
     "is-root": "^2.1.0",
+    "log-update": "^3.4.0",
     "string-width": "^4.2.0",
     "table": "^5.4.6"
   },
