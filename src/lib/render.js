@@ -52,7 +52,7 @@ export default async function renderTable() {
     'Status',
     'CTID',
     'Name',
-    'Load Average',
+    'Load average',
     'IP',
     'CPU Units',
     'Processes' + chalk.redBright('*'),
