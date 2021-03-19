@@ -23,7 +23,7 @@ function parseArgumentsIntoOptions(rawArgs) {
   }
 }
 
-export async function cli(args) {
+export default async function cli(args) {
   let options
 
   try {
